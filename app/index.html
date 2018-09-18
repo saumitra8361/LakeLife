@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LakeLife DApp- A Lake History</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div>
+          <h1 class="text-center">Lake Records</h1>
+          <hr/>
+          <br/>
+        </div>
+        <h2>You have <span class="black"><span id="records"></span> Lake Records</span></h2>
+        <br>
+        <br>
+        <h2>Insert Lake Records in Blockchain</h2>
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="LakeID"><b>Lake ID</b></label>
+            <input type="number" class="form-control" id="id" placeholder="Enter Lake ID" name="Lake ID" required>
+          </div>
+          <div class="form-group">
+            <label for="LakeArea"><b>Lake Area in SqrFt</b></label>
+            <input type="number" class="form-control" id="area" placeholder="Enter Lake Area" name="Lake Area" required>
+          </div>
+          <div class="form-group">
+            <label for="LakeCapacity"><b>Lake Capacity</b></label>
+            <input type="number" class="form-control" id="capacity" placeholder="Enter Lake Capacity" name="Lake Capacity" required>
+          </div>
+          <div class="form-group">
+            <label for="LakeDepth"><b>Lake Depth</b></label>
+            <input type="number" class="form-control" id="depth" placeholder="Enter Lake Depth" name="Lake Depth" required>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="setvalue" onclick="App.submitLakeRecords()">Submit Lake Records</button>
+        </form>
+        <br />
+        <br />
+        <h2>Get Lake Records from Blockchain</h2>
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="LakeID"><b>Lake ID</b></label>
+            <input type="number" class="form-control" id="id2" placeholder="Enter Lake ID" name="Lake ID" required>
+          </div>
+          <div class="form-group">
+            <tr><td><b><label for="LakeArea">Lake Area in SqrFt</label></td><td>:</td></b><td><span span id="area2"></span></td></tr>
+          </div>
+          <div class="form-group">
+            <tr><td><b><label for="LakeCapacity">Lake Capacity</label></td><td>:</td></b><td><span span id="capacity2"></span></td></tr>
+          </div>
+          <div class="form-group">
+            <tr><td><b><label for="LakeDepth">Lake Depth</label></td><td>:</td></b><td><span span id="depth2"></span></td></tr>
+          </div>
+
+           <button type="button" class="btn btn-primary" id="getvalue" onclick="App.getLakeRecords()">Get Lake Record</button>
+        </form>
+        <br />
+        <br />
+        <span id="status"></span>
+        <br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
